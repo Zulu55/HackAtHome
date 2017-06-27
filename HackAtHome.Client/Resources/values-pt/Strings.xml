@@ -4,4 +4,9 @@
   <string name="Email">Email:</string>
   <string name="Password">Senha:</string>
   <string name="Validate">Validar</string>
+  <string name="Accept">Aceitar</string>
+  <string name="Error">Erro</string>
+  <string name="NoEmail">Você deve inserir um email.</string>
+  <string name="NoPassword">Você deve inserir uma senha.</string>
+  <string name="UserOrPasswordWrong">Usuário ou senha incorreto.</string>
 </resources>

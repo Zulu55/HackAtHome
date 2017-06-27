@@ -26,6 +26,10 @@ namespace HackAtHome.Client
 		
 		public static void UpdateIdValues()
 		{
+			global::HackAtHome.Entities.Resource.String.ApplicationName = global::HackAtHome.Client.Resource.String.ApplicationName;
+			global::HackAtHome.Entities.Resource.String.Hello = global::HackAtHome.Client.Resource.String.Hello;
+			global::HackAtHome.SAL.Resource.String.ApplicationName = global::HackAtHome.Client.Resource.String.ApplicationName;
+			global::HackAtHome.SAL.Resource.String.Hello = global::HackAtHome.Client.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
@@ -63,8 +67,11 @@ namespace HackAtHome.Client
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050008
+			public const int button1 = 2131034120;
+			
 			// aapt resource value: 0x7f050005
-			public const int button1 = 2131034117;
+			public const int buttonValidate = 2131034117;
 			
 			// aapt resource value: 0x7f050002
 			public const int editTextEmail = 2131034114;
@@ -116,17 +123,35 @@ namespace HackAtHome.Client
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040000
-			public const int ApplicationName = 2130968576;
+			// aapt resource value: 0x7f040005
+			public const int Accept = 2130968581;
 			
 			// aapt resource value: 0x7f040001
-			public const int Email = 2130968577;
+			public const int ApplicationName = 2130968577;
 			
 			// aapt resource value: 0x7f040002
-			public const int Password = 2130968578;
+			public const int Email = 2130968578;
+			
+			// aapt resource value: 0x7f040006
+			public const int Error = 2130968582;
+			
+			// aapt resource value: 0x7f040000
+			public const int Hello = 2130968576;
+			
+			// aapt resource value: 0x7f040007
+			public const int NoEmail = 2130968583;
+			
+			// aapt resource value: 0x7f040008
+			public const int NoPassword = 2130968584;
 			
 			// aapt resource value: 0x7f040003
-			public const int Validate = 2130968579;
+			public const int Password = 2130968579;
+			
+			// aapt resource value: 0x7f040009
+			public const int UserOrPasswordWrong = 2130968585;
+			
+			// aapt resource value: 0x7f040004
+			public const int Validate = 2130968580;
 			
 			static String()
 			{

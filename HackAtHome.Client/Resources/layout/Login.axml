@@ -27,7 +27,8 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/textViewPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
         <EditText
             android:inputType="textPassword"
             android:id="@+id/editTextPassword"
@@ -37,7 +38,7 @@
             android:text="@string/Validate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button1"
+            android:id="@+id/buttonValidate"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:textAllCaps="false" />

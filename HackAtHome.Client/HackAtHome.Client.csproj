@@ -84,7 +84,16 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values-pt\Strings.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\HackAtHome.Entities\HackAtHome.Entities.csproj">
+      <Project>{84a08ba3-9c5a-4322-ae0b-38494ecfcdc0}</Project>
+      <Name>HackAtHome.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HackAtHome.SAL\HackAtHome.SAL.csproj">
+      <Project>{8FE37B6D-FBB9-48FB-9131-EE8B7C99F848}</Project>
+      <Name>HackAtHome.SAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.

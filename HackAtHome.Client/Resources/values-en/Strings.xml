@@ -4,4 +4,9 @@
   <string name="Email">Email:</string>
   <string name="Password">Password:</string>
   <string name="Validate">Validate</string>
+  <string name="Accept">Accept</string>
+  <string name="Error">Error</string>
+  <string name="NoEmail">You must enter an email.</string>
+  <string name="NoPassword">You must enter a password.</string>
+  <string name="UserOrPasswordWrong">User or password wrong.</string>
 </resources>
