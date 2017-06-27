@@ -7,9 +7,9 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout1"
-        android:layout_marginRight="20dp"
+        android:id="@+id/linearLayout4"
         android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="20dp">
         <TextView
             android:text="@string/Email"
@@ -28,7 +28,7 @@
             android:id="@+id/textViewPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="10dp" />
         <EditText
             android:inputType="textPassword"
             android:id="@+id/editTextPassword"

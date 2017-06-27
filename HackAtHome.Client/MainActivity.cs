@@ -52,7 +52,10 @@ namespace HackAtHome.Client
                 return;
             }
 
-            ShowMessage("Ok", result.FullName);
+            var intent = new Android.Content.Intent(this, typeof(EvidencesActivity));
+            intent.PutExtra("Token", result.Token);
+            intent.PutExtra("FullName", result.FullName);
+            StartActivity(intent);
         }
 
         void ShowMessage(string title, string message)
@@ -65,6 +68,5 @@ namespace HackAtHome.Client
             alert.SetButton(Resources.GetString(Resource.String.Accept), (s, ev) => { });
             alert.Show();
         }
-
     }
 }

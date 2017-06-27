@@ -26,6 +26,8 @@ namespace HackAtHome.Client
 		
 		public static void UpdateIdValues()
 		{
+			global::HackAtHome.CustomAdapters.Resource.String.ApplicationName = global::HackAtHome.Client.Resource.String.ApplicationName;
+			global::HackAtHome.CustomAdapters.Resource.String.Hello = global::HackAtHome.Client.Resource.String.Hello;
 			global::HackAtHome.Entities.Resource.String.ApplicationName = global::HackAtHome.Client.Resource.String.ApplicationName;
 			global::HackAtHome.Entities.Resource.String.Hello = global::HackAtHome.Client.Resource.String.Hello;
 			global::HackAtHome.SAL.Resource.String.ApplicationName = global::HackAtHome.Client.Resource.String.ApplicationName;
@@ -67,32 +69,47 @@ namespace HackAtHome.Client
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f05000b
+			public const int buttonValidate = 2131034123;
+			
 			// aapt resource value: 0x7f050008
-			public const int button1 = 2131034120;
+			public const int editTextEmail = 2131034120;
+			
+			// aapt resource value: 0x7f05000a
+			public const int editTextPassword = 2131034122;
 			
 			// aapt resource value: 0x7f050005
-			public const int buttonValidate = 2131034117;
+			public const int linearLayout1 = 2131034117;
 			
-			// aapt resource value: 0x7f050002
-			public const int editTextEmail = 2131034114;
+			// aapt resource value: 0x7f05000c
+			public const int linearLayout2 = 2131034124;
 			
-			// aapt resource value: 0x7f050004
-			public const int editTextPassword = 2131034116;
-			
-			// aapt resource value: 0x7f050000
-			public const int linearLayout1 = 2131034112;
+			// aapt resource value: 0x7f05000d
+			public const int linearLayout3 = 2131034125;
 			
 			// aapt resource value: 0x7f050006
-			public const int linearLayout2 = 2131034118;
+			public const int linearLayout4 = 2131034118;
+			
+			// aapt resource value: 0x7f050002
+			public const int listViewEvidences = 2131034114;
 			
 			// aapt resource value: 0x7f050007
-			public const int linearLayout3 = 2131034119;
+			public const int textViewEmail = 2131034119;
 			
 			// aapt resource value: 0x7f050001
-			public const int textViewEmail = 2131034113;
+			public const int textViewEvidences = 2131034113;
+			
+			// aapt resource value: 0x7f050000
+			public const int textViewFullName = 2131034112;
 			
 			// aapt resource value: 0x7f050003
-			public const int textViewPassword = 2131034115;
+			public const int textViewLabName = 2131034115;
+			
+			// aapt resource value: 0x7f050004
+			public const int textViewLabStatus = 2131034116;
+			
+			// aapt resource value: 0x7f050009
+			public const int textViewPassword = 2131034121;
 			
 			static Id()
 			{
@@ -108,7 +125,13 @@ namespace HackAtHome.Client
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Login = 2130903040;
+			public const int Evidences = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int ListItem = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int Login = 2130903042;
 			
 			static Layout()
 			{
@@ -134,6 +157,9 @@ namespace HackAtHome.Client
 			
 			// aapt resource value: 0x7f040006
 			public const int Error = 2130968582;
+			
+			// aapt resource value: 0x7f04000a
+			public const int Evidences = 2130968586;
 			
 			// aapt resource value: 0x7f040000
 			public const int Hello = 2130968576;

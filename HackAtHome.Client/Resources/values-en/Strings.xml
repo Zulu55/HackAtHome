@@ -9,4 +9,5 @@
   <string name="NoEmail">You must enter an email.</string>
   <string name="NoPassword">You must enter a password.</string>
   <string name="UserOrPasswordWrong">User or password wrong.</string>
+  <string name="Evidences">Evidences</string>
 </resources>

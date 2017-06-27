@@ -9,4 +9,5 @@
   <string name="NoEmail">Você deve inserir um email.</string>
   <string name="NoPassword">Você deve inserir uma senha.</string>
   <string name="UserOrPasswordWrong">Usuário ou senha incorreto.</string>
+  <string name="Evidences">Evidências</string>
 </resources>
