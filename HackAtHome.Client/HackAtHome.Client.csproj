@@ -51,9 +51,13 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="UrlImageViewHelper">
+      <HintPath>..\Components\urlimageviewhelper-1.0.4.2\lib\android\UrlImageViewHelper.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Complex.cs" />
+    <Compile Include="EvidenceDetailActivity.cs" />
     <Compile Include="EvidencesActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -75,6 +79,9 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout-land\ListItem.axml" />
     <AndroidResource Include="Resources\layout-land\Evidences.axml" />
+    <AndroidResource Include="Resources\layout\EvidenceDetail.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -92,7 +99,9 @@
     <AndroidResource Include="Resources\values-en\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values-pt\Strings.xml" />
+    <AndroidResource Include="Resources\values-pt\Strings.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HackAtHome.CustomAdapters\HackAtHome.CustomAdapters.csproj">

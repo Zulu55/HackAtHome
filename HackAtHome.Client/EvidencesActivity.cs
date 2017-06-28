@@ -6,6 +6,7 @@ using HackAtHome.SAL;
 using HackAtHome.CustomAdapters;
 using System.Collections.Generic;
 using HackAtHome.Entities;
+using System.Linq;
 
 namespace HackAtHome.Client
 {
@@ -15,6 +16,8 @@ namespace HackAtHome.Client
         TextView textViewFullName;
         ListView listViewEvidences;
         List<Evidence> evidences;
+        string fullName;
+        string token;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -25,11 +28,25 @@ namespace HackAtHome.Client
             textViewFullName = FindViewById<TextView>(Resource.Id.textViewFullName);
             listViewEvidences = FindViewById<ListView>(Resource.Id.listViewEvidences);
 
-            var fullName = Intent.GetStringExtra("FullName");
-            var token = Intent.GetStringExtra("Token");
+            fullName = Intent.GetStringExtra("FullName");
+            token = Intent.GetStringExtra("Token");
 
             LoadEvidences(token);
             textViewFullName.Text = fullName;
+
+            listViewEvidences.ItemClick += ListViewEvidences_ItemClick;
+        }
+
+        private void ListViewEvidences_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            var intent = new Intent(this, typeof(EvidenceDetailActivity));
+            var evidence = evidences.Where(ev => ev.EvidenceID == e.Id).FirstOrDefault();
+            intent.PutExtra("EvidenceId", e.Id.ToString());
+            intent.PutExtra("Title", evidence.Title);
+            intent.PutExtra("Status", evidence.Status);
+            intent.PutExtra("Token", token);
+            intent.PutExtra("FullName", fullName);
+            StartActivity(intent);
         }
 
         async void LoadEvidences(string token)

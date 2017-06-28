@@ -2,6 +2,8 @@
 using Android.Widget;
 using Android.OS;
 using HackAtHome.SAL;
+using Android.Content;
+using HackAtHome.Entities;
 
 namespace HackAtHome.Client
 {
@@ -51,10 +53,26 @@ namespace HackAtHome.Client
                 return;
             }
 
-            var intent = new Android.Content.Intent(this, typeof(EvidencesActivity));
+            SendEvidence(result);
+
+            var intent = new Intent(this, typeof(EvidencesActivity));
             intent.PutExtra("Token", result.Token);
             intent.PutExtra("FullName", result.FullName);
             StartActivity(intent);
+        }
+
+        async void SendEvidence(ResultInfo result)
+        {
+            var labItem = new LabItem
+            {
+                DeviceId = Android.Provider.Settings.Secure.GetString(
+                    ContentResolver, Android.Provider.Settings.Secure.AndroidId),
+                Email = editTextEmail.Text,
+                Lab = "Hack@Home",
+            };
+
+            var client = new MicrosoftServiceClient();
+            await client.SendEvidence(labItem);
         }
 
         void ShowMessage(string title, string message)
