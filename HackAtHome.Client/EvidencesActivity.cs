@@ -4,6 +4,8 @@ using Android.OS;
 using Android.Widget;
 using HackAtHome.SAL;
 using HackAtHome.CustomAdapters;
+using System.Collections.Generic;
+using HackAtHome.Entities;
 
 namespace HackAtHome.Client
 {
@@ -12,12 +14,12 @@ namespace HackAtHome.Client
     {
         TextView textViewFullName;
         ListView listViewEvidences;
+        List<Evidence> evidences;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            // Create your application here
             SetContentView(Resource.Layout.Evidences);
 
             textViewFullName = FindViewById<TextView>(Resource.Id.textViewFullName);
@@ -32,13 +34,28 @@ namespace HackAtHome.Client
 
         async void LoadEvidences(string token)
         {
-            var client = new ServiceClient();
-            var evidences = await client.GetEvidencesAsync(token);
+            var dataEvidence = (Complex)this.FragmentManager.FindFragmentByTag("DataEvidence");
+
+            if (dataEvidence == null)
+            {
+                dataEvidence = new Complex();
+                var fragmentTransaction = this.FragmentManager.BeginTransaction();
+                fragmentTransaction.Add(dataEvidence, "DataEvidence");
+                fragmentTransaction.Commit();
+                var client = new ServiceClient();
+                evidences = await client.GetEvidencesAsync(token);
+                dataEvidence.ListOfEvidences = evidences;
+            }
+            else
+            {
+                evidences = dataEvidence.ListOfEvidences;
+            }
+
             listViewEvidences.Adapter = new EvidencesAdapter(
                 this,
                 evidences,
-                Resource.Layout.ListItem, 
-                Resource.Id.textViewLabName, 
+                Resource.Layout.ListItem,
+                Resource.Id.textViewLabName,
                 Resource.Id.textViewLabStatus);
         }
     }
