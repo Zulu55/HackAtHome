@@ -82,6 +82,7 @@
     <AndroidResource Include="Resources\layout\EvidenceDetail.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout-land\EvidenceDetail.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
